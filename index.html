@@ -1,44 +1,70 @@
-<header>
-    <img src="images/logo.svg" alt="Site Logo">
-    <span>Your Name</span>
-    <button id="menu" aria-label="Open Menu"></button>
-</header>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Course Home Page - [Your Name]</title>
+    <meta name="description" content="This is the course home page for WDD 231, showcasing web development projects and course certification progress.">
+    <meta name="author" content="[Your Name]">
 
-<nav>
-    <ul class="navigation">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Chamber</a></li>
-        <li><a href="#">Final</a></li>
-    </ul>
-</nav>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<main>
-    <h1>Home</h1>
-    <section id="about">
-        <h2>About Me</h2>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="50" height="50">
+        <span>[Your Name]</span>
+        <button id="menu" aria-label="Toggle Menu">≡</button>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final Project</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li> </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        <section>
+            <h2>About Me</h2>
+            <p>Your bio goes here. Add a few sentences about your goals and interests.</p>
         </section>
-    
-    <section id="photo">
-        <h2>Student Photo</h2>
-        <img src="images/profile.webp" alt="Your Name profile photo">
-    </section>
 
-    <section id="certificate">
-        <h2>Web Certificate Courses</h2>
-        <div class="filter-buttons">
-            <button id="all">All</button>
-            <button id="cse">CSE</button>
-            <button id="wdd">WDD</button>
-        </div>
-        <div id="course-list">
+        <section>
+            <h2>Student Photo</h2>
+            <img src="images/profile.webp" alt="Student Profile Photo" loading="lazy">
+        </section>
+
+        <section id="certificate">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
             </div>
-        <p id="total-credits"></p>
-    </section>
-</main>
+            <div id="course-list">
+                </div>
+            <p>Total Credits: <span id="total-credits"></span></p>
+        </section>
+    </main>
 
-<footer>
-    <div class="socials">
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn" width="30"></a>
+            <a href="#"><img src="images/github-icon.svg" alt="GitHub" width="30"></a>
         </div>
-    <p>&copy;<span id="currentyear"></span> | Your Name | Utah, USA</p>
-    <p id="lastModified"></p>
-</footer>
+        <p>&copy;<span id="currentyear"></span> | [Your Name] | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
