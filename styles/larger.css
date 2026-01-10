@@ -1,0 +1,21 @@
+@media screen and (min-width: 600px) {
+    /* Horizontal Nav */
+    #menu { display: none; } /* Hide hamburger */
+    .navigation { display: flex; background: #333; justify-content: space-around; }
+    .navigation li { flex: 1; text-align: center; }
+
+    /* Layout Grid */
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    h1, #certificate { grid-column: 1 / -1; } /* Spans full width */
+
+    #course-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
