@@ -1,13 +1,13 @@
 /* 1. Global Styles & Typography */
 body {
-    font-family: 'Roboto', sans-serif; /* Requirement: Google Font */
+    font-family: 'Roboto', sans-serif; /* Google Font */
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
 }
 
-/* 2. Header - Consolidated to fix "Repeated Rules" error */
+/* 2. Header  */
 header {
     background-color: #222;
     color: white;
@@ -126,7 +126,7 @@ section p, section img {
     font-weight: bold;
 }
 
-/* Completed Course Style - Required Difference */
+/* Completed Course Style - Difference */
 .course-card.completed {
     background-color: #b5835a;
     color: white;
