@@ -1,107 +1,146 @@
-/* Base Mobile Styles */
-:root {
-    --primary-color: #222;
-    --secondary-color: #b5835a;
-    --text-on-dark: #ffffff;
-    --light-bg: #eee;
+/* 1. Global Styles & Typography */
+body {
+    font-family: 'Roboto', sans-serif; /* Requirement: Google Font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
 }
 
-body { 
-    font-family: 'Roboto', sans-serif; 
-    margin: 0; 
-    padding: 0; 
-}
-
-/* Consolidated Header Rule - Fixes W3C Repeated Rules error */
+/* 2. Header - Consolidated to fix "Repeated Rules" error */
 header {
-    background-color: var(--primary-color);
-    color: var(--text-on-dark);
+    background-color: #222;
+    color: white;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+header img {
+    width: 50px;
+    height: auto;
+}
+
+/* Hamburger Button Styling */
 #menu {
     font-size: 2rem;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
-/* Navigation - Fixes Accessibility Contrast error */
-.navigation { 
-    display: none; 
-    list-style: none; 
-    padding: 0; 
+/* 3. Navigation - Fixes Contrast Error (12.63:1 Ratio) */
+.navigation {
+    display: none; /* Hidden on mobile by default */
+    list-style: none;
+    padding: 0;
     margin: 0;
-    background: #333; 
+    background-color: #333;
 }
 
-.navigation.show { 
-    display: block; 
+.navigation.show {
+    display: block; /* Toggled by JS */
 }
 
-.navigation li a { 
-    display: block; 
-    padding: 1rem; 
-    color: var(--text-on-dark); /* Ensures contrast is high (Passes WCAG AA) */
-    text-decoration: none; 
-    border-bottom: 1px solid #444; 
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    color: #ffffff; /* Explicit white text for high contrast */
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+/* Wayfinding: Styles the active page link */
+.navigation li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 4. Main Content Sections */
+main {
+    padding: 1rem;
+}
+
+section {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+section h2 {
+    background-color: #222;
+    color: white;
+    margin: 0;
+    padding: 10px;
     text-align: center;
 }
 
-/* Main Content */
+section p, section img {
+    padding: 15px;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* 5. Course Card Logic */
 .filter-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 1.5rem 0;
+    margin: 20px 0;
 }
 
 .filter-buttons button {
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
     cursor: pointer;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 4px;
 }
 
-#course-list { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
-    padding: 1rem; 
+#course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.course-card { 
-    padding: 1.5rem; 
-    border: 1px solid #ccc; 
-    background: var(--light-bg); 
-    text-align: center; 
-    border-radius: 5px; 
+.course-card {
+    padding: 1.5rem;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    text-align: center;
     font-weight: bold;
 }
 
-/* Completion Styling */
-.course-card.completed { 
-    background: var(--secondary-color); 
-    color: white; 
+/* Completed Course Style - Required Difference */
+.course-card.completed {
+    background-color: #b5835a;
+    color: white;
 }
 
-/* Footer */
-footer { 
-    background: #ddd; 
-    text-align: center; 
-    padding: 1rem; 
-    margin-top: 2rem;
+/* 6. Footer Styles */
+footer {
+    background-color: #ddd;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 20px;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
+    gap: 20px;
+    margin-bottom: 15px;
 }
 
-.social-icons img { 
-    width: 30px; 
+.social-icons img {
+    width: 30px;
+    height: auto;
 }
