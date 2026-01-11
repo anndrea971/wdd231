@@ -32,13 +32,14 @@ header img {
     padding: 0.5rem;
 }
 
-/* 3. Navigation - Fixes Contrast Error (12.63:1 Ratio) */
+/* 3. Navigation */
 .navigation {
     display: none; /* Hidden on mobile by default */
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #333;
+    background-color: #222;
+    color: #ffffff
 }
 
 .navigation.show {
@@ -54,11 +55,17 @@ header img {
     border-bottom: 1px solid #444;
 }
 
-/* Wayfinding: Styles the active page link */
+/* Wayfinding: */
 .navigation li a.active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #000000;
+    color: white;
     font-weight: bold;
     text-decoration: underline;
+}
+
+.navigation li a:hover {
+    background-color: #444;
+    color: #ffffff;
 }
 
 /* 4. Main Content Sections */
