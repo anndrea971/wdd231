@@ -1,0 +1,81 @@
+/* Base Styles & Typography */
+:root {
+    --primary-color: #004a8d; /* Example: Deep Blue for Maipú */
+    --secondary-color: #d10a11; /* Example: Red accent */
+    --accent-color: #f4f4f4;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+/* --- Directory Grid View (Default) --- */
+#member-container.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile is one column */
+    gap: 15px;
+    padding: 15px;
+}
+
+#member-container.grid section {
+    border: 1px solid #ddd;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#member-container.grid img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* --- Directory List View --- */
+#member-container.list {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#member-container.list section {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#member-container.list img {
+    display: none; /* Hide images in list view per wireframe style */
+}
+
+/* Footer */
+footer {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid var(--primary-color);
+}
