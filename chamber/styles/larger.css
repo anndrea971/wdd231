@@ -1,0 +1,18 @@
+/* Media Query for Desktop (roughly 600px+) */
+@media screen and (min-width: 600px) {
+    #member-container.grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+    }
+}
