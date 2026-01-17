@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Directory | Your City Chamber of Commerce</title>
+    
+    <meta name="description" content="Directory of local businesses and organizations in our community.">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="Chamber of Commerce Business Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/chamber/images/share-image.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
+    
+    <link rel="icon" href="images/favicon.ico">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/chamber-logo.webp" alt="Chamber Logo">
+            <h1>Your City Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-button">Menu</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Business Directory</h2>
+        
+        <div class="menu-toggle">
+            <button id="grid-view">Grid View</button>
+            <button id="list-view">List View</button>
+        </div>
+
+        <article id="member-container" class="grid">
+            </article>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Your City Chamber of Commerce</strong></p>
+            <p>123 Main Street, Your City, State 12345</p>
+            <p>info@yourchamber.org | (123) 456-7890</p>
+        </div>
+        <div class="social-links">
+            <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+            <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; <span id="currentyear"></span> | Your Name | WDD 231 Class Project</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/directory.js"></script>
+    <script src="scripts/getdates.js"></script>
+</body>
+</html>
