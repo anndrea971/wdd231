@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Supermercado La Farfana",
+    "address": "Av. La Farfana 1200, Maipú, Santiago",
+    "phone": "+56 2 2555 0101",
+    "website": "https://lafarfana.cl",
+    "image": "farfana_logo.webp",
+    "membershipLevel": 3,
+    "other": "Servicio comunitario y productos locales desde 1995."
+  },
+  {
+    "name": "Repuestos Pajaritos",
+    "address": "Av. Los Pajaritos 2500, Maipú, Santiago",
+    "phone": "+56 2 2555 0202",
+    "website": "https://repuestospajaritos.cl",
+    "image": "pajaritos_rep.webp",
+    "membershipLevel": 2,
+    "other": "Líderes en repuestos automotrices en el sector poniente."
+  },
+  {
+    "name": "Cafetería El Abrazo",
+    "address": "Cuatro Poniente 450, Maipú, Santiago",
+    "phone": "+56 2 2555 0303",
+    "website": "https://cafeteriaelabrazo.cl",
+    "image": "abrazo_cafe.webp",
+    "membershipLevel": 1,
+    "other": "Punto de encuentro familiar y desayunos artesanales."
+  },
+  {
+    "name": "Ferretería Maipú Centro",
+    "address": "Pajaritos 1540, Maipú, Santiago",
+    "phone": "+56 2 2555 0404",
+    "website": "https://ferreteria-maipu.cl",
+    "image": "ferreteria_maipu.webp",
+    "membershipLevel": 2,
+    "other": "Soluciones para el hogar y construcción a pasos del Metro."
+  },
+  {
+    "name": "Clínica Dental Monumento",
+    "address": "Monumento 1800, Maipú, Santiago",
+    "phone": "+56 2 2555 0505",
+    "website": "https://dentalmonumento.cl",
+    "image": "monumento_dental.webp",
+    "membershipLevel": 3,
+    "other": "Atención odontológica integral de alta calidad."
+  },
+  {
+    "name": "Panadería El Templo",
+    "address": "Av. El Carmen 320, Maipú, Santiago",
+    "phone": "+56 2 2555 0606",
+    "website": "https://eltemplo-pan.cl",
+    "image": "templo_pan.webp",
+    "membershipLevel": 1,
+    "other": "La mejor marraqueta de la comuna, horneada diariamente."
+  },
+  {
+    "name": "Maipú Tech Services",
+    "address": "Américo Vespucio 1001, Maipú, Santiago",
+    "phone": "+56 2 2555 0707",
+    "website": "https://maiputech.cl",
+    "image": "maipu_tech.webp",
+    "membershipLevel": 2,
+    "other": "Soporte técnico computacional y redes para PYMES."
+  }
+]
