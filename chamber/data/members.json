@@ -13,7 +13,7 @@
     "address": "Av. Los Pajaritos 2500, Maipú, Santiago",
     "phone": "+56 2 2555 0202",
     "website": "https://www.repuestosviyo.cl/?srsltid=AfmBOordMtVS_eOwjqRLaRxI_zfybcI9qC70WLtueO_Nw0YlwsUlUdew",
-    "image": "pajaritos_rep.webp",
+    "image": "viyo.webp",
     "membershipLevel": 2,
     "other": "Líderes en repuestos automotrices en el sector poniente."
   },
@@ -21,7 +21,7 @@
     "name": "Cafetería El Abrazo",
     "address": "Cuatro Poniente 450, Maipú, Santiago",
     "phone": "+56 2 2555 0303",
-    "website": "https://cafeteriaelabrazo.cl",
+    "website": "https://www.instagram.com/mmcafeteriaypasteleria/?hl=es-la",
     "image": "abrazo_cafe.webp",
     "membershipLevel": 1,
     "other": "Punto de encuentro familiar y desayunos artesanales."
@@ -30,7 +30,7 @@
     "name": "Ferretería Maipú Centro",
     "address": "Pajaritos 1540, Maipú, Santiago",
     "phone": "+56 2 2555 0404",
-    "website": "https://ferreteria-maipu.cl",
+    "website": "https://www.construex.cl/exhibidores/ferreteria_rinconada_maipu",
     "image": "ferreteria_maipu.webp",
     "membershipLevel": 2,
     "other": "Soluciones para el hogar y construcción a pasos del Metro."
@@ -39,8 +39,8 @@
     "name": "Clínica Dental Monumento",
     "address": "Monumento 1800, Maipú, Santiago",
     "phone": "+56 2 2555 0505",
-    "website": "https://dentalmonumento.cl",
-    "image": "monumento_dental.webp",
+    "website": "https://www.unosalud.cl/",
+    "image": "clinicadental.webp",
     "membershipLevel": 3,
     "other": "Atención odontológica integral de alta calidad."
   },
@@ -48,7 +48,7 @@
     "name": "Panadería El Templo",
     "address": "Av. El Carmen 320, Maipú, Santiago",
     "phone": "+56 2 2555 0606",
-    "website": "https://eltemplo-pan.cl",
+    "website": "https://www.facebook.com/PanificadoraMaipu/",
     "image": "templo_pan.webp",
     "membershipLevel": 1,
     "other": "La mejor marraqueta de la comuna, horneada diariamente."
@@ -57,7 +57,7 @@
     "name": "Maipú Tech Services",
     "address": "Américo Vespucio 1001, Maipú, Santiago",
     "phone": "+56 2 2555 0707",
-    "website": "https://maiputech.cl",
+    "website": "https://www.instagram.com/p/DCKfLsKvlRn/",
     "image": "maipu_tech.webp",
     "membershipLevel": 2,
     "other": "Soporte técnico computacional y redes para PYMES."
