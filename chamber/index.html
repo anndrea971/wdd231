@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Timbuktu Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Timbuktu Chamber of Commerce home page. Connecting local businesses and community.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <img src="images/logo.webp" alt="Chamber Logo">
+            <h1>Timbuktu Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu"></button>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+                <img src="images/hero-small.webp" alt="Timbuktu Business District" width="1200" height="600">
+            </picture>
+            <div class="cta">
+                <h2>Empowering Our Community</h2>
+                <p>Join the network of professionals driving Timbuktu forward.</p>
+                <a href="join.html" class="btn">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="events">
+                <h3>Current Events</h3>
+                <div class="event-card">
+                    <h4>Annual Business Gala</h4>
+                    <p>Coming this Friday at the Grand Hall.</p>
+                </div>
+                </section>
+
+            <section class="weather-box">
+                <h3>Weather</h3>
+                <div id="current-weather">
+                    <p>Loading current weather...</p>
+                </div>
+                <hr>
+                <div id="forecast">
+                    <p>Loading 3-day forecast...</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlights">
+            <h3>Member Spotlights</h3>
+            <div id="member-container">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/spotlights.js"></script>
+</body>
+</html>
