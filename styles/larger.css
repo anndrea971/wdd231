@@ -1,7 +1,31 @@
 @media screen and (min-width: 600px) {
-    /* Horizontal Nav */
+    body {
+        font-size: 18px;
+    }   
     #menu { 
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #222;
+    }
+    #menu span:nth-child(2) { 
         display: none; 
+    }
+
+    .navigation.show {
+        display: block;
+    }
+
+    /* Toggle the icons when open */
+    #menu.show span:nth-child(1) { display: none; }
+    #menu.show span:nth-child(2) { display: inline; }
+}
+
+/* --- Desktop View (Large) --- */
+@media (min-width: 600px) {
+    #menu {
+        display: none; /* Hide the hamburger button on big screens */
     }
 
     .navigation { 
