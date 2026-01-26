@@ -1,5 +1,5 @@
 // --- CONFIGURATION ---
-const key = 'YOUR_API_KEY'; // Replace with your real key
+const key = '6adf8789a3ca6fc76ba6b829efd7d5fd'; // Replace with your real key
 const lat = '-33.5106'; // Maipú, Chile Latitude
 const lon = '-70.7572'; // Maipú, Chile Longitude
 
