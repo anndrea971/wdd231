@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Maipu´s Chamber of Commerce</title>
+    <title>WDD231 | Maipu Chamber of Commerce Home</title>
 
-    <meta name="description" content="Welcome to the Maipu´s Chamber of Commerce home page. Connecting local businesses and community.">
+    <meta name="description" content="Welcome to the Maipu Chamber of Commerce home page. Connecting local businesses and community.">
     <meta name="author" content="Andrea Gonzalez">
-    <meta property="og:description" content="Explore the Maipu Chamber of Commerce business directory to find reliable local services, shops, and organizations in our community.">
-    <meta property="og:title" content="Chamber of Commerce Business Directory">
-    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="Maipu Chamber of Commerce Home">
+    <meta property="og:description" content="Connecting local businesses and community in Maipu.">
     <meta property="og:image" content="https://anndrea971.github.io/wdd231/chamber/images/share-image.jpg">
-    <meta property="og:url" content="https://anndrea971.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://anndrea971.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
     
     <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
     <script src="scripts/nav-footer.js" defer></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
-    <header>
-        <div class="logo-box">
-            <img src="images/chamber-logo.webp" alt="Chamber Logo">
-            <p class="header-title">Maipu's Chamber of Commerce</p>
-        </div>
-        <nav>
-            <button id="menu-btn" aria-label="Toggle Menu"></button>
-            <ul class="navigation">
-                <li><a href="index.html" class="active">Home</a></li>
+    <header class="header">
+        <img src="images/chamber-logo.webp" alt="Chamber Logo" width="50" height="50" class="chamber-logo">
+
+        <span>Maipu Chamber of Commerce</span>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Navigation">
+            <img src="images/menu-burger.svg" alt="Open Menu" width="32" height="32">
+        </button>
+
+        <div class="overlay" id="overlay"></div>
+
+        <nav id="nav-bar" class="nav-bar">
+            <button class="close-btn" id="close-btn" aria-label="Close Menu">
+                <img src="images/cross.svg" alt="Close Button" width="32" height="32">
+            </button>
+            <ul class="nav-links">
+                <li class="current"><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -73,9 +81,11 @@
             <section class="weather-box">
                 <h3>Weather</h3>
                 <div id="current-weather">
-                    <img id="weather-icon" src="images/clima.png" alt="Weather icon">
+                    <figure>
+                        <img id="weather-icon" src="images/clima.png" alt="Weather icon">
+                        <figcaption id="weather-desc">Loading...</figcaption>
+                    </figure>
                     <p><span id="current-temp">--</span>&deg;F</p>
-                    <figcaption>Loading...</figcaption>
                 </div>
                 <hr>
                 <div id="forecast">
@@ -86,15 +96,29 @@
 
         <section class="spotlights">
             <h3>Member Spotlights</h3>
-            <div id="member-container">
-                </div>
+            <div id="member-container" class="grid">
+                <p>Loading local business partners...</p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-copy">
-            <p>&copy; <span id="year"></span> Maipu's Chamber of Commerce</p>
-            <p>Last Modification: <span id="lastModified"></span></p>
+        <div class="info">
+            <span class="site-name">Maipu Chamber of Commerce</span>
+            <p>123 Main Street, Maipu, State 12345</p>
+            <p>info@yourchamber.org | (123) 456-7890</p>
+        </div>
+
+        <div class="social">
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/youtube-icon.png" alt="YouTube" width="24"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/twitter-icon.png" alt="Twitter" width="24"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/linkedin-icon.png" alt="LinkedIn" width="24"></a>
+        </div>
+
+        <div class="details">
+            <p>WDD231 Class Project | Andrea Gonzalez</p>
+            <p><span id="currentyear"></span> | Maipu Chamber of Commerce | Chile</p>
+            <p id="last-modified"></p>
         </div>
     </footer>
 </body>
