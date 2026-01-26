@@ -1,79 +1,88 @@
-const url = "data/members.json";
-const cards = document.querySelector("#member-container");
+// javaScript for the Companies Card
+const cards = document.querySelector("#member-container"); // Matches the ID in your HTML
 
-async function getMemberData() {
-    try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            
-            displayMembers(data.members); 
-        } else {
-            console.error("Failed to fetch data");
-        }
-    } catch (error) {
-        console.error("Error fetching member data:", error);
+// Fetch the json Companies Data using async/await
+const url = "data/members.json"; 
+
+const getCompaniesData = async () => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
     }
-}
+    const data = await response.json();
+    // Assuming your JSON uses the key 'members'
+    displayData(data.members); 
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-const displayMembers = (members) => {
-    // Clear the container before rendering to avoid duplicates
-    cards.innerHTML = "";
+getCompaniesData();
 
-    members.forEach((member) => {
-        let card = document.createElement("section");
-        card.classList.add("member-card"); // Helpful for CSS styling
-        
-        let image = document.createElement("img");
-        // Ensure path is correct based on your folder structure
-        image.setAttribute("src", `images/${member.image}`); 
-        image.setAttribute("alt", `${member.name} logo`);
-        image.setAttribute("loading", "lazy");
-        image.setAttribute("width", "200");
-        image.setAttribute("height", "150");
+const displayData = (members) => {
+  // Clear container to prevent duplicates
+  cards.innerHTML = "";
 
-        let name = document.createElement("h3");
-        let address = document.createElement("p");
-        let phone = document.createElement("p");
-        let website = document.createElement("a");
-        let level = document.createElement("p");
+  members.forEach((member) => {
+    const section = document.createElement("section");
+    section.classList.add("section"); 
 
-        name.textContent = member.name;
-        address.textContent = member.address;
-        phone.textContent = member.phone;
-        website.textContent = "Visit Website";
-        website.setAttribute("href", member.website);
-        website.setAttribute("target", "_blank");
-        
-        // Convert the number (3, 2, 1) to a readable string
-        const levelNames = { 3: "Gold", 2: "Silver", 1: "Member" };
-        level.innerHTML = `Membership Level: <strong>${levelNames[member.membershipLevel]}</strong>`;
+    const img = document.createElement("img");
+    img.classList.add("img"); 
 
-        card.appendChild(image);
-        card.appendChild(name);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(website);
-        card.appendChild(level);
+    const companyName = document.createElement("p");
+    
+    // Address is usually hidden in list view in this design pattern
+    const firstParagraph = document.createElement("p");
+    firstParagraph.classList.add("hidden"); 
 
-        cards.appendChild(card);
-    });
-}
+    const secondParagraph = document.createElement("p");
+    const websiteDetails = document.createElement("p");
+    const website = document.createElement("a");
+    
+    // New: Membership level (keeping your logic but his style)
+    const levelParagraph = document.createElement("p");
+    const levelNames = { 3: "Gold", 2: "Silver", 1: "Member" };
+
+    // Setting attributes
+    img.setAttribute("src", `images/${member.image}`);
+    img.setAttribute("alt", `${member.name} logo`);
+    img.setAttribute("loading", "lazy");
+    img.width = 130;
+    img.height = 100;
+
+    companyName.textContent = `${member.name}`;
+    firstParagraph.textContent = `${member.address}`;
+    secondParagraph.textContent = `${member.phone}`;
+    levelParagraph.textContent = `Level: ${levelNames[member.membershipLevel]}`;
+
+    website.textContent = `Click Here For More Details`;
+    website.setAttribute("href", `${member.website}`);
+    website.setAttribute("target", `_blank`);
+    website.setAttribute("rel", "noopener noreferrer");
+
+    // Building the structure
+    section.appendChild(img);
+    section.appendChild(companyName);
+    section.appendChild(firstParagraph);
+    section.appendChild(secondParagraph);
+    section.appendChild(levelParagraph);
+    
+    websiteDetails.appendChild(website);
+    section.appendChild(websiteDetails);
+    
+    cards.appendChild(section);
+  });
+};
 
 // --- Grid/List Toggle Logic ---
-const gridbutton = document.querySelector("#grid-view");
+const gridbutton = document.querySelector("#grid-btn"); // Updated to match your HTML ID
 const listbutton = document.querySelector("#list-view");
 
-if (gridbutton && listbutton) {
+if (gridbutton) {
     gridbutton.addEventListener("click", () => {
         cards.classList.add("grid");
         cards.classList.remove("list");
     });
-
-    listbutton.addEventListener("click", () => {
-        cards.classList.add("list");
-        cards.classList.remove("grid");
-    });
 }
-
-getMemberData();
