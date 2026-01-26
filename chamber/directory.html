@@ -1,78 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-US">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Directory | Maipu Chamber of Commerce</title>
-    
+    <title>WDD231 | Maipu Chamber of Commerce Directory</title>
+
     <meta name="description" content="Directory of local businesses and organizations in our Maipu community.">
     <meta name="author" content="Andrea Gonzalez">
-    <meta property="og:description" content="Explore the Maipu Chamber of Commerce business directory to find reliable local services, shops, and organizations in our community.">
+
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+
     <meta property="og:title" content="Chamber of Commerce Business Directory">
-    <meta property="og:type" content="website">
+    <meta property="og:description" content="Explore the Maipu Chamber of Commerce business directory to find reliable local services, shops, and organizations in our community.">
     <meta property="og:image" content="https://anndrea971.github.io/wdd231/chamber/images/share-image.jpg">
     <meta property="og:url" content="https://anndrea971.github.io/wdd231/chamber/directory.html">
-    
-    <link rel="icon" href="images/favicon.ico">
-    
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
+  </head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <body>
 
-</head>
-<body>
-    <header>
-        <div class="logo-container">
-            <img src="images/chamber-logo.webp" alt="Chamber Logo">
-        </div>
-        <nav>
-            <button id="menu-button">Menu</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+      <img src="images/chamber-logo.webp" alt="Chamber Logo" width="50" height="50" class="chamber-logo">
+
+      <span>Maipu Chamber of Commerce</span>
+
+      <button id="grid-btn" class="grid-btn" aria-label="Toggle Grid View">
+          <img src="images/grid-view.svg" alt="Grid View" width="26" height="26" id="icon">
+      </button>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Navigation">
+          <img src="images/menu-burger.svg" alt="Open Menu" width="32" height="32">
+      </button>
+
+      <div class="overlay" id="overlay"></div>
+
+      <nav id="nav-bar" class="nav-bar">
+        <button class="close-btn" id="close-btn" aria-label="Toggle List View">
+            <img src="images/cross.svg" alt="Close Button" width="32" height="32">
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li class="current"><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-         <h1>Maipu Chamber of Commerce</h1>
-        <h2>Business Directory</h2>
-        
-        <div class="menu-toggle">
-            <button id="grid-view">Grid View</button>
-            <button id="list-view">List View</button>
-        </div>
+    <h1>Business Directory</h1>
 
-        <article id="member-container" class="grid">
-            </article>
+    <main id="list">
+      <div id="member-container" class="grid">
+          </div>
     </main>
 
     <footer>
-        <div class="footer-info">
-            <p><strong>Maipu Chamber of Commerce</strong></p>
-            <p>123 Main Street, Maipu, State 12345</p>
-            <p>info@yourchamber.org | (123) 456-7890</p>
-        </div>
-        <div class="social-links">
-            <a href="#"><img src="images/youtube-icon.png" alt="YouTube icon png"></a>
-            <a href="#"><img src="images/twitter-icon.png" alt="Twitter icon png"></a>
-            <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn icon png"></a>
-        </div>
-        <div class="footer-copy">
-            <p>&copy; <span id="currentyear"></span> | Andrea Gonzalez | WDD 231 Class Project</p>
-            <p>Last Modification: <span id="lastModified"></span></p>
-        </div>
-    </footer>
+      <div class="info">
+        <span class="site-name">Maipu Chamber of Commerce</span>
+        <p>123 Main Street, Maipu, State 12345</p>
+        <p>info@yourchamber.org</p>
+        <p>(123) 456-7890</p>
+      </div>
 
-</body>
+      <div class="social">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="images/youtube-icon.png" alt="YouTube logo" width="16" height="16" loading="lazy">
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="images/twitter-icon.png" alt="Twitter logo" width="16" height="16" loading="lazy">
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin-icon.png" alt="Linkedin logo" width="16" height="16" loading="lazy">
+        </a>
+      </div>
+
+      <div class="details">
+        <p>WDD231 Class Project | Andrea Gonzalez</p>
+        <p><span id="currentyear"></span> | Maipu Chamber of Commerce | Chile</p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+    
+  </body>
 </html>
