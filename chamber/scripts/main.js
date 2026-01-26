@@ -116,6 +116,15 @@ if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 if (lastModSpan) lastModSpan.textContent = `Last Modified: ${document.lastModified}`;
 
 /* --- INITIALIZE --- */
+// These run on every page (Weather & Footer)
 getCurrentWeather();
 getForecast();
-getSpotlights();
+
+// This only runs on the HOME page (Index)
+// We check for a specific home-page class or ID
+if (document.querySelector(".hero")) { 
+    getSpotlights(); 
+}
+
+// Note: Your directory.js handles the 7 members on the directory page.
+// Do NOT call getSpotlights() on the directory page.
