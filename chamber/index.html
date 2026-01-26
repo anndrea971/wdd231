@@ -32,10 +32,10 @@
     <header>
         <div class="logo-box">
             <img src="images/chamber-logo.webp" alt="Chamber Logo">
-            <h1>Maipu´s Chamber of Commerce</h1>
+            <p class="header-title">Maipu's Chamber of Commerce</p>
         </div>
         <nav>
-            <button id="menu"></button>
+            <button id="menu" aria-label="Toggle Menu"></button>
             <ul class="navigation">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -46,11 +46,13 @@
     </header>
 
     <main>
+        <h1>Welcome to Maipu's Chamber of Commerce</h1>
+
         <section class="hero">
             <picture>
                 <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
                 <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
-                <img src="images/hero-small.webp" alt="Maipu´s Business District" width="1200" height="600">
+                <img src="images/hero-small.webp" alt="Maipu's Business District" width="1200" height="600">
             </picture>
             <div class="cta">
                 <h2>Empowering Our Community</h2>
@@ -66,20 +68,21 @@
                     <h4>Annual Business Gala</h4>
                     <p>Coming this Friday at the Grand Hall.</p>
                 </div>
-                </section>
+            </section>
 
-        <section class="weather-box">
-            <h3>Weather</h3>
-            <div id="current-weather">
-                <img id="weather-icon" src="" alt="">
-                <p><span id="current-temp"></span></p>
-                <figcaption></figcaption>
-            </div>
-            <hr>
-            <div id="forecast">
-                <p>Loading 3-day forecast...</p>
-            </div>
-        </section>
+            <section class="weather-box">
+                <h3>Weather</h3>
+                <div id="current-weather">
+                    <img id="weather-icon" src="images/placeholder.png" alt="Weather icon">
+                    <p><span id="current-temp">--</span>&deg;F</p>
+                    <figcaption>Loading...</figcaption>
+                </div>
+                <hr>
+                <div id="forecast">
+                    <p>Loading 3-day forecast...</p>
+                </div>
+            </section>
+        </div>
 
         <section class="spotlights">
             <h3>Member Spotlights</h3>
@@ -89,11 +92,10 @@
     </main>
 
     <footer>
-         <div class="footer-copy">
-        <p>&copy; <span id="year"></span> Maipu´s Chamber of Commerce</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
-            </div>
+        <div class="footer-copy">
+            <p>&copy; <span id="year"></span> Maipu's Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
     </footer>
-
 </body>
 </html>
