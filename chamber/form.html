@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form | Application Submitted</title>
+
+    <meta name="description" content="Thank you for applying to join the Maipu´s Chamber of Commerce. Your membership application has been successfully submitted.">
+    <meta name="author" content="Andrea Gonzalez" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-16x16.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-32x32.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"/>
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Thank You | Application Submitted">
+    <meta property="og:description" content="Thank you for submitting your application to join the Chevron Chamber of Commerce. Your membership request has been successfully received.">
+    <meta property="og:image" content="https://anndrea971.github.io/wdd231/chamber/images/chamber-og-image.webp">
+    <meta property="og:url" content="https://anndrea971.github.io/wdd231/chamber/thankyou.html"/>
+    <meta property="og:type" content="website">
+
+    <!-- External Link for CSS and javaScript -->
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+
+    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/nav-footer.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Markup For The Header -->
+    <header class="header">
+      <img
+        src="images/chamber-logo.webp"
+        alt="Chevron Logo"
+        width="50"
+        height="50"
+        class="chevron-logo"
+      />
+
+      <span>C Chamber of Commerce</span>
+
+      <button id="grid-btn" class="grid-btn" aria-label="Toggle Grid View">
+        <img
+          src="images/grid-view.svg"
+          alt="Grid View"
+          width="26"
+          height="26"
+          id="icon"
+        />
+      </button>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Navigation">
+        <img
+          src="images/menu.svg"
+          alt="Open Menu"
+          width="32"
+          height="32"
+        />
+      </button>
+
+      <div class="overlay" id="overlay"></div>
+
+      <!-- Markup For The Navigation For Mobile View-->
+      <nav id="nav-bar" class="nav-bar">
+        <button class="close-btn" id="close-btn" aria-label="Toggle List View">
+          <img
+            src="images/cerrar.svg"
+            alt="Close Button"
+            width="32"
+            height="32"
+          />
+        </button>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="centered-content">
+      <section class="summary-card">
+          <h1 class="accent-text">Application Received!</h1>
+          <p>Thank you for applying. Here is a summary of your submission:</p>
+          
+          <div id="submission-details" class="details-list">
+              <!-- Data populated via JS -->
+          </div>
+
+          <div class="form-actions">
+              <a href="index.html" class="form-submit">Back to Home</a>
+          </div>
+      </section>
+  </main>
+
+ <footer>
+
+        <div class="social">
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/youtube-icon.png" alt="YouTube icon" width="24"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/twitter-icon.png" alt="Twitter icon" width="24"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/linkedin-icon.png" alt="LinkedIn icon" width="24"></a>
+        </div>
+
+        <div class="details">
+            <p>WDD231 Class Project | Andrea Gonzalez</p>
+            <p><span id="currentyear"></span> | Maipu Chamber of Commerce | Chile</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+  
+  </body>
+</html>
