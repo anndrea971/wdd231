@@ -7,10 +7,10 @@
 
 :root {
   --primary-color: rgba(11, 42, 74, 1);
-  --accent-color: rgba(255, 183, 3, 1);
+  --accent-color: rgb(255, 255, 255);
   --secondary-color: rgba(10, 194, 255, 1);
   --background-color: rgba(248, 249, 250, 1);
-  --bg-muted: rgba(221, 221, 221, 1);
+  --bg-muted: rgb(221, 221, 221);
   --shadow-color: rgba(0, 0, 0, 0.5);
   --list-odd-bg: rgba(33, 158, 188, 0.4);
   --text-font: "Open Sans", sans-serif;
