@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan | Maipu SLP Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <style>
+        :root {
+            --primary-color: rgba(11, 42, 74, 1);
+            --secondary-color: rgba(10, 194, 255, 1);
+            --accent-color: rgb(255, 255, 255);
+            --background-color: rgba(248, 249, 250, 1);
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 6px solid var(--secondary-color);
+        }
+
+        h1, h2, h3 {
+            font-family: "Montserrat", sans-serif;
+            color: var(--primary-color);
+        }
+
+        header h1 { color: white; }
+
+        section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .color-box {
+            flex: 1;
+            min-width: 150px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .wireframe-img {
+            width: 100%;
+            height: auto;
+            border: 2px solid var(--primary-color);
+            margin-top: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th { background-color: var(--primary-color); color: white; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Site Plan: Maipu SLP Center</h1>
+        <p>Andrea Gonzalez | WDD 231</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Site Name</h2>
+            <p><strong>Maipu Speech-Language Pathology (SLP) Center</strong></p>
+            <p>Reason: This name provides a professional, location-based identity that helps local residents in Maipu find specialized clinical services quickly.</p>
+        </section>
+
+        <section>
+            <h2>2. Site Purpose</h2>
+            <p>To provide a clinical resource hub where patients and parents can find speech therapy services, interact with a "Word of the Day" API for vocabulary building, and access educational milestones.</p>
+        </section>
+
+        <section>
+            <h2>3. Scenarios</h2>
+            <ul>
+                <li><strong>Scenario 1:</strong> A parent is looking for an articulation specialist for their toddler and needs to see if the clinic offers services for that specific age group.</li>
+                <li><strong>Scenario 2:</strong> A teacher wants to find a daily language exercise for their classroom and visits the site to use the "Daily Language Goal" tool.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Color Schema</h2>
+            <div class="color-palette">
+                <div class="color-box" style="background-color: rgba(11, 42, 74, 1); color: white;">Primary: rgba(11, 42, 74, 1)</div>
+                <div class="color-box" style="background-color: rgba(10, 194, 255, 1);">Secondary: rgba(10, 194, 255, 1)</div>
+                <div class="color-box" style="background-color: rgba(248, 249, 250, 1);">Background: #F8F9FA</div>
+            </div>
+            <table>
+                <tr>
+                    <th>Color Role</th>
+                    <th>Application</th>
+                </tr>
+                <tr>
+                    <td>Primary</td>
+                    <td>Headers, navigation background, and branding.</td>
+                </tr>
+                <tr>
+                    <td>Secondary</td>
+                    <td>Button accents, active nav links, and borders.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>5. Typography</h2>
+            <h3>Heading Font: Montserrat</h3>
+            <p>Used for all major titles (h1, h2, h3) to provide a modern and trustworthy clinical appearance.</p>
+            <h3>Body Font: Open Sans</h3>
+            <p>Used for all paragraphs and lists. This font ensures high legibility and accessibility for users with communication challenges.</p>
+        </section>
+
+        <section>
+            <h2>6. Wireframes</h2>
+            <h3>Mobile View</h3>
+            <img src="images/wireframe-mobile.png" alt="Mobile Wireframe Placeholder" class="wireframe-img">
+            
+            
+            <h3>Desktop View</h3>
+            <img src="images/wireframe-desktop.png" alt="Desktop Wireframe Placeholder" class="wireframe-img">
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Maipu SLP Center Site Plan | Andrea Gonzalez</p>
+    </footer>
+
+</body>
+</html>
