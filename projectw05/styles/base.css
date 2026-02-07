@@ -1,0 +1,100 @@
+/* -------------------------------------- General Styling --------------------------------------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgba(11, 42, 74, 1);
+  --accent-color: rgb(255, 255, 255);
+  --secondary-color: rgba(10, 194, 255, 1);
+  --background-color: rgba(248, 249, 250, 1);
+  --bg-muted: rgb(221, 221, 221);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --list-odd-bg: rgba(33, 158, 188, 0.4);
+  --text-font: "Open Sans", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  font-family: var(--text-font);
+}
+
+/* -------------------------------------- Header & Nav --------------------------------------- */
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 24px auto 44px 44px;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+header span {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-left: 1.4rem;
+}
+
+.menu-btn, .grid-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-bar {
+  background: var(--primary-color);
+  width: 80%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 1000;
+  transition: all 0.6s ease;
+}
+
+.nav-bar.show { transform: translateX(0); }
+
+.nav-bar ul li { list-style: none; padding: 1.5rem 2rem; }
+.nav-bar ul li a { color: var(--accent-color); text-decoration: none; font-size: 1.35rem; }
+.nav-bar ul li.current { border-left: 4px solid var(--secondary-color); }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--shadow-color);
+  opacity: 0;
+  z-index: 900;
+  pointer-events: none;
+  transition: 0.8s;
+}
+.overlay.active { opacity: 1; pointer-events: auto; }
+
+/* -------------------------------------- Footer --------------------------------------- */
+footer {
+  width: 100%;
+  background: var(--bg-muted);
+  padding: 1rem;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* -------------------------------------- Responsive (Base) --------------------------------------- */
+@media (min-width: 38rem) {
+  .menu-btn, .close-btn { display: none; }
+  .header { grid-template-areas: "logo title nav grid"; grid-template-columns: auto 1fr auto auto; }
+  .nav-bar { position: static; height: auto; transform: none; display: flex; grid-area: nav; }
+  .nav-bar ul { display: flex; gap: 1rem; }
+}
