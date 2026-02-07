@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> speech language pathology center </title>
+
+    <meta name="description" content="Welcome to my private consultation as a local businesses and community.">
+    <meta name="author" content="Andrea Gonzalez">
+
+    <meta property="og:title" content="Maipu SLP Home">
+    <meta property="og:description" content="Connecting local businesses and community in Maipu.">
+    <meta property="og:image" content="https://anndrea971.github.io/wdd231/chamber/images/share-image.jpg">
+    <meta property="og:url" content="https://anndrea971.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/nav-footer.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="images/chamber-logo.webp" alt="Chamber Logo" width="50" height="50" class="chamber-logo">
+
+        <span>Maipu Chamber of Commerce</span>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Navigation">
+            <img src="images/menu.svg" alt="Open Menu" width="32" height="32">
+        </button>
+
+        <div class="overlay" id="overlay"></div>
+
+        <nav id="nav-bar" class="nav-bar">
+            <button class="close-btn" id="close-btn" aria-label="Close Menu">
+                <img src="images/cerrar.svg" alt="Close Button" width="32" height="32">
+            </button>
+            <ul class="nav-links">
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Maipu's Chamber of Commerce</h1>
+
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+                <img src="images/hero-small.webp" alt="Maipu's Business District" width="1200" height="600">
+            </picture>
+            <div class="cta">
+                <h2>Empowering Our Community</h2>
+                <p>Join the network of professionals driving SLP forward.</p>
+                <a href="join.html" class="btn">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="events">
+                <h3>Current Events</h3>
+                <div class="event-card">
+                    <h4>Annual Business Gala</h4>
+                    <p>Coming this Friday at the Grand Hall.</p>
+                </div>
+            </section>
+
+            <section class="weather-box">
+                <h3>Weather</h3>
+                <div id="current-weather">
+                    <figure>
+                        <img id="weather-icon" src="images/clima.png" alt="Weather icon">
+                        <figcaption id="weather-desc">Loading...</figcaption>
+                    </figure>
+                    <p><span id="current-temp">--</span>&deg;F</p>
+                </div>
+                <hr>
+                <div id="forecast">
+                    <p>Loading 3-day forecast...</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlights">
+            <h3>Member Spotlights</h3>
+            <div id="member-container" class="grid">
+                <p>Loading local business partners...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="social">
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/youtube-icon.png" alt="YouTube icon" width="24"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/twitter-icon.png" alt="Twitter icon" width="24"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/linkedin-icon.png" alt="LinkedIn icon" width="24"></a>
+        </div>
+
+        <div class="details">
+            <p>WDD231 Class Project | Andrea Gonzalez</p>
+            <p><span id="currentyear"></span> | Maipu SLP | Chile</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+</html>
