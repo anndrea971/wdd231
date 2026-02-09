@@ -4,7 +4,7 @@ export const places = [
     address: "Carmen 1750, Maipú",
     cost_description:
       "Basilica entry: Free. Mirador (Viewpoint): $1.000 CLP for adults, $600 CLP for children.",
-    photo_url: "images/templo-votivo.webp",
+    photo_url: "images/plaza-maipu.webp",
     description:
       "An iconic National Sanctuary built to fulfill a vow made by General O'Higgins during the War of Independence. It features a massive 360-degree viewpoint and beautiful stained glass windows.",
     important_info:
@@ -15,7 +15,7 @@ export const places = [
     address: "Camino a Rinconada 700 (Side of the Temple), Maipú",
     cost_description:
       "General entry: $1.500 CLP. Students and Seniors: $500 CLP. Children under 5: Free.",
-    photo_url: "images/museo-del-carmen.webp",
+    photo_url: "images/midmall-maipu.webp",
     description:
       "Located right next to the Temple, this museum houses an incredible collection of historical documents, religious art, and military relics from the Battle of Maipú.",
     important_info:
