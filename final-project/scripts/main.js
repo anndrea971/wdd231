@@ -28,3 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
     setDates();
     toggleMenu();
 });
+
+// Toggle mobile menu
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-btn');
+const navBar = document.getElementById('nav-bar');
+const overlay = document.getElementById('overlay');
+
+// Open Menu
+menuBtn.addEventListener('click', () => {
+    navBar.classList.add('open');
+    overlay.classList.add('open');
+});
+
+// Close Menu
+const closeMenu = () => {
+    navBar.classList.remove('open');
+    overlay.classList.remove('open');
+};
+
+closeBtn.addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
