@@ -115,6 +115,7 @@ dialog::backdrop {
     }
 
     #nav-list {
+        color: var(--white);
         display: flex;
         gap: 1.5rem;
         margin-top: 0;
