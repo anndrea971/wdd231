@@ -1,12 +1,12 @@
 :root {
-    /* Colors from Site Plan [cite: 15, 16, 17] */
+    /* Colors from Site Plan */
     --primary: rgba(11, 42, 74, 1);
     --secondary: rgba(10, 194, 255, 1);
     --bg-color: #F8F9FA;
     --text-color: #333;
     --white: #ffffff;
     
-    /* Fonts from Site Plan  */
+    /* Fonts from Site Plan */
     --heading-font: 'Montserrat', sans-serif;
     --body-font: 'Open Sans', sans-serif;
 }
@@ -33,7 +33,7 @@ h1, h2, h3 {
 
 /* --- Header & Navigation --- */
 header {
-    background-color: var(--white);
+    background-color: var(--primary); /* Fixes logo visibility & contrast */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,23 +49,34 @@ header {
     font-size: 1.5rem;
 }
 
+/* Hamburger Button */
 .menu-btn {
     background: none;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    display: block; /* Visible on mobile */
 }
 
-/* Mobile Sidebar Menu (Off-screen by default)  */
+/* Icon fallback if SVG fails */
+.menu-btn::before {
+    content: "☰";
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.menu-btn img {
+    display: none; /* Hide img to use the CSS icon above */
+}
+
+/* Mobile Sidebar Menu */
 .nav-bar {
     position: fixed;
     top: 0;
     right: -100%; 
-    width: 70%;
+    width: 250px;
     height: 100vh;
     background-color: var(--primary);
-    transition: 0.3s ease;
+    transition: 0.4s ease-in-out;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -73,7 +84,7 @@ header {
 }
 
 .nav-bar.open {
-    right: 0; /* Slides into view */
+    right: 0;
 }
 
 .close-btn {
@@ -82,6 +93,8 @@ header {
     border: none;
     cursor: pointer;
     margin-bottom: 2rem;
+    color: var(--white);
+    font-size: 1.5rem;
 }
 
 #nav-list {
@@ -89,7 +102,7 @@ header {
 }
 
 #nav-list li {
-    margin: 1rem 0;
+    margin: 1.2rem 0;
 }
 
 #nav-list a {
@@ -97,11 +110,9 @@ header {
     text-decoration: none;
     font-family: var(--body-font);
     font-size: 1.2rem;
-    display: block;
-    padding: 0.5rem 0;
 }
 
-/* Active Page Indication (Wayfinding)  */
+/* Active Page (Mobile Sidebar) */
 #nav-list a.active {
     color: var(--secondary);
     font-weight: bold;
@@ -109,14 +120,14 @@ header {
     padding-left: 10px;
 }
 
-/* Overlay for Mobile Menu */
+/* Overlay background when menu is open */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     display: none;
     z-index: 1500;
 }

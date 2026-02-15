@@ -1,9 +1,8 @@
-/* --- Desktop & Layout Components --- */
-
+/* --- Main Content Layout --- */
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .hero {
@@ -21,17 +20,17 @@ main {
     display: inline-block;
     background-color: var(--secondary);
     color: var(--primary);
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 1rem;
 }
 
-/* Grid for Milestones & Info - Mobile First (1 column) */
+/* Grid for Milestones & Info */
 .grid-container, .info-grid {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* Default for small screens */
     gap: 1.5rem;
 }
 
@@ -40,27 +39,28 @@ main {
     padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Form & Modal Styles */
+/* Form Styles */
 form {
     background: var(--white);
     padding: 2rem;
     max-width: 600px;
     margin: 0 auto;
     border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
 label {
     display: block;
     margin-top: 1rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-input, select {
+input, select, textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin-top: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -71,65 +71,48 @@ input, select {
     color: var(--white);
     border: none;
     margin-top: 1.5rem;
-    padding: 10px 20px;
+    padding: 12px;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 4px;
+    width: 100%;
 }
 
+/* Modal / Dialog */
 dialog {
     margin: auto;
     padding: 2rem;
-    border: 2px solid var(--secondary);
+    border: none;
     border-radius: 8px;
     max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Controls */
-.controls {
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.filter-btn {
-    padding: 8px 15px;
-    margin: 5px;
-    cursor: pointer;
-    background: #ddd;
-    border: none;
-    border-radius: 4px;
-}
-
-.filter-btn.active {
-    background: var(--primary);
-    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* --- Desktop View (Min-width 768px) --- */
 @media (min-width: 768px) {
-    /* 1. Hide mobile-specific buttons and overlay */
+    /* Hide Hamburger and Overlay */
     .menu-btn, .close-btn, .overlay {
         display: none !important;
     }
 
-    /* 2. Reset the nav-bar from a sidebar to a standard horizontal menu */
+    /* Convert Sidebar to Horizontal Navbar */
     .nav-bar {
         position: static;
         width: auto;
         height: auto;
         background: transparent;
         padding: 0;
-        display: block; /* Show navigation */
+        display: flex !important;
     }
 
     #nav-list {
-        display: flex; /* Flexbox for larger screens  */
+        display: flex;
         flex-direction: row;
-        gap: 1.5rem;
+        gap: 2rem;
         margin-top: 0;
     }
 
@@ -137,18 +120,18 @@ dialog::backdrop {
         margin: 0;
     }
 
-    #nav-list a {
-        padding: 0.5rem 0;
-    }
-
-    /* 3. Adjust Wayfinding for horizontal layout */
+    /* Active Page Wayfinding (Desktop style) */
     #nav-list a.active {
-        border-left: none; /* Remove the sidebar border */
-        border-bottom: 3px solid var(--secondary); /* Add bottom underline  */
+        border-left: none;
+        border-bottom: 3px solid var(--secondary);
         padding-left: 0;
     }
 
-    /* 4. Desktop Grid Layout (3 Columns)  */
+    #nav-list a:hover {
+        color: var(--secondary);
+    }
+
+    /* Desktop Grid Layout (3 Columns) */
     .grid-container, .info-grid {
         grid-template-columns: repeat(3, 1fr);
     }
