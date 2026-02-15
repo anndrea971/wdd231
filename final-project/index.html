@@ -21,7 +21,16 @@
 <body>
     <header>
         <div class="logo">Maipu SLP Center</div>
-        <button id="hamburger" aria-label="Menu"></button>
+           <button class="menu-btn" id="menu-btn" aria-label="Navigation">
+            <img src="images/menu.svg" alt="Open Menu" width="32" height="32">
+        </button>
+
+        <div class="overlay" id="overlay"></div>
+
+        <nav id="nav-bar" class="nav-bar">
+            <button class="close-btn" id="close-btn" aria-label="Close Menu">
+                <img src="images/cerrar.svg" alt="Close Button" width="32" height="32">
+            </button>
         <nav>
             <ul id="nav-list">
                 <li><a href="index.html" class="active">Home</a></li>
