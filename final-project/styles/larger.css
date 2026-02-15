@@ -99,27 +99,28 @@ dialog::backdrop {
     color: var(--white);
 }
 
-/* Desktop View (Min-width 768px) */
 @media (min-width: 768px) {
-    #hamburger {
+    /* Ocultar botones de móvil */
+    .menu-btn, .close-btn {
         display: none;
     }
-    nav ul {
-        display: flex; /* Horizontal Layout */
-        gap: 1rem;
-    }
-    nav ul.open {
-        display: flex;
+
+    /* Resetear nav para escritorio */
+    .nav-bar {
         position: static;
+        width: auto;
+        height: auto;
         background: transparent;
-        text-align: left;
+        padding: 0;
     }
-    nav a {
-        border-bottom: none;
-        padding: 0.5rem 1rem;
+
+    #nav-list {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 0;
     }
-    
-    .grid-container, .info-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+
+    #nav-list a:hover {
+        color: var(--secondary);
     }
 }
