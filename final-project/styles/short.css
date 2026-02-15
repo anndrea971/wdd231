@@ -33,7 +33,8 @@ h1, h2, h3 {
 
 /* --- Header & Navigation --- */
 header {
-    background-color: var(--primary); /* Fixes logo visibility & contrast */
+    background-color: var(--primary); 
+    color: var(--white); /* CRITICAL: Fixes contrast audit by forcing white text */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,10 +55,11 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-    display: block; /* Visible on mobile */
+    display: flex;
+    align-items: center;
+    padding: 5px;
 }
 
-/* Icon fallback if SVG fails */
 .menu-btn::before {
     content: "☰";
     color: var(--white);
@@ -65,7 +67,7 @@ header {
 }
 
 .menu-btn img {
-    display: none; /* Hide img to use the CSS icon above */
+    display: none; /* Uses CSS character for reliability */
 }
 
 /* Mobile Sidebar Menu */
@@ -112,7 +114,7 @@ header {
     font-size: 1.2rem;
 }
 
-/* Active Page (Mobile Sidebar) */
+/* Active Page Wayfinding */
 #nav-list a.active {
     color: var(--secondary);
     font-weight: bold;
@@ -120,7 +122,6 @@ header {
     padding-left: 10px;
 }
 
-/* Overlay background when menu is open */
 .overlay {
     position: fixed;
     top: 0;
