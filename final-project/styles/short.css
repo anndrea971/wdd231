@@ -33,7 +33,7 @@ h1, h2, h3 {
 
 /* --- Header & Navigation --- */
 header {
-    background-color: var(--primary);
+    background-color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
