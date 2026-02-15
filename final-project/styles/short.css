@@ -1,12 +1,12 @@
 :root {
-    /* Colors from Site Plan */
+    /* Colors from Site Plan [cite: 15, 16, 17] */
     --primary: rgba(11, 42, 74, 1);
     --secondary: rgba(10, 194, 255, 1);
     --bg-color: #F8F9FA;
     --text-color: #333;
     --white: #ffffff;
     
-    /* Fonts from Site Plan */
+    /* Fonts from Site Plan  */
     --heading-font: 'Montserrat', sans-serif;
     --body-font: 'Open Sans', sans-serif;
 }
@@ -30,9 +30,10 @@ h1, h2, h3 {
     color: var(--primary);
     margin-bottom: 0.5rem;
 }
-/* Header Base */
+
+/* --- Header & Navigation --- */
 header {
-    background-color: var(--primary); /* rgba(11, 42, 74, 1) */
+    background-color: var(--primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,23 +43,25 @@ header {
 }
 
 .logo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--heading-font);
     color: var(--white);
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .menu-btn {
     background: none;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-/* Navegación Móvil (Oculta por defecto) */
+/* Mobile Sidebar Menu (Off-screen by default)  */
 .nav-bar {
     position: fixed;
     top: 0;
-    right: -100%; /* Fuera de la pantalla */
+    right: -100%; 
     width: 70%;
     height: 100vh;
     background-color: var(--primary);
@@ -66,33 +69,11 @@ header {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    z-index: 2000;
 }
 
 .nav-bar.open {
-    right: 0; /* Desliza hacia adentro */
-}
-
-#nav-list {
-    list-style: none;
-    margin-top: 3rem;
-}
-
-#nav-list li {
-    margin: 1.5rem 0;
-}
-
-#nav-list a {
-    color: var(--white);
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
-}
-
-/* Enlace activo (Wayfinding) */
-#nav-list a.active {
-    color: var(--secondary); /* rgba(10, 194, 255, 1) */
-    font-weight: bold;
-    border-bottom: 2px solid var(--secondary);
+    right: 0; /* Slides into view */
 }
 
 .close-btn {
@@ -100,70 +81,51 @@ header {
     background: none;
     border: none;
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 
-/* Header & Nav */
-header {
-    background-color: var(--primary);
-    color: var(--white);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-nav ul {
+#nav-list {
     list-style: none;
-    display: none; /* Hidden on mobile by default */
 }
 
-nav ul.open {
-    display: block; /* Hamburger toggle */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: var(--primary);
-    text-align: center;
-    z-index: 1000;
+#nav-list li {
+    margin: 1rem 0;
 }
 
-nav a {
-    display: block;
-    padding: 1rem;
+#nav-list a {
     color: var(--white);
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 0;
 }
 
-nav a.active {
-    background-color: var(--secondary);
-    color: var(--primary);
+/* Active Page Indication (Wayfinding)  */
+#nav-list a.active {
+    color: var(--secondary);
     font-weight: bold;
+    border-left: 4px solid var(--secondary);
+    padding-left: 10px;
 }
 
-/* Hamburger Icon */
-#hamburger {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 2rem;
-    cursor: pointer;
-}
-#hamburger::before {
-    content: "☰";
-}
-#hamburger.open::before {
-    content: "✖";
+/* Overlay for Mobile Menu */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1500;
 }
 
-/* Footer */
+.overlay.open {
+    display: block;
+}
+
+/* --- Footer --- */
 footer {
     background-color: var(--primary);
     color: var(--white);
@@ -171,6 +133,8 @@ footer {
     padding: 2rem;
     margin-top: 2rem;
 }
+
 footer a {
     color: var(--secondary);
+    text-decoration: none;
 }
