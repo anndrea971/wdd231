@@ -30,6 +30,77 @@ h1, h2, h3 {
     color: var(--primary);
     margin-bottom: 0.5rem;
 }
+/* Header Base */
+header {
+    background-color: var(--primary); /* rgba(11, 42, 74, 1) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navegación Móvil (Oculta por defecto) */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fuera de la pantalla */
+    width: 70%;
+    height: 100vh;
+    background-color: var(--primary);
+    transition: 0.3s ease;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar.open {
+    right: 0; /* Desliza hacia adentro */
+}
+
+#nav-list {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+#nav-list li {
+    margin: 1.5rem 0;
+}
+
+#nav-list a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* Enlace activo (Wayfinding) */
+#nav-list a.active {
+    color: var(--secondary); /* rgba(10, 194, 255, 1) */
+    font-weight: bold;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.close-btn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 /* Header & Nav */
 header {
