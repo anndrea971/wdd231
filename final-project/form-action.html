@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Received</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Maipu SLP Center</div>
+    </header>
+    <main>
+        <h1>Thank You!</h1>
+        <p>We have received your request with the following details:</p>
+        <div id="results" class="results-container"></div>
+        <a href="index.html" class="cta-button">Return Home</a>
+    </main>
+    <script>
+        // Simple script to parse URL params (Required by rubric)
+        const currentUrl = window.location.href;
+        const results = document.querySelector('#results');
+        
+        // Split the URL at '?'
+        const formData = currentUrl.split('?')[1].split('&');
+
+        formData.forEach((element) => {
+            const pair = element.split('=');
+            const p = document.createElement('p');
+            // Decode URI component to handle spaces and special chars
+            p.innerHTML = `<strong>${pair[0]}:</strong> ${decodeURIComponent(pair[1].replace(/\+/g, ' '))}`;
+            results.appendChild(p);
+        });
+    </script>
+</body>
+</html>
