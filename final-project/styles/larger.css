@@ -73,7 +73,7 @@ input, select, textarea {
 
 /* --- Desktop View (Min-width 768px) --- */
 @media (min-width: 768px) {
-    /* Hide Hamburger UI */
+    /* Hide Mobile Controls */
     .menu-btn, .close-btn, .overlay {
         display: none !important;
     }
@@ -86,6 +86,7 @@ input, select, textarea {
         background: transparent;
         padding: 0;
         display: flex !important;
+        box-shadow: none;
     }
 
     #nav-list {
@@ -102,6 +103,7 @@ input, select, textarea {
     /* Ensure links stay high-contrast on desktop */
     #nav-list a {
         color: var(--white) !important;
+        padding: 5px 0;
     }
 
     #nav-list a.active {
@@ -109,6 +111,11 @@ input, select, textarea {
         border-left: none;
         border-bottom: 3px solid var(--secondary);
         padding-left: 0;
+    }
+
+    /* Hover Effect */
+    #nav-list a:hover {
+        color: var(--secondary) !important;
     }
 
     /* Desktop 3-Column Grid */

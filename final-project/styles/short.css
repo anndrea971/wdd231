@@ -33,8 +33,7 @@ h1, h2, h3 {
 
 /* --- Header & Navigation --- */
 header {
-    background-color: var(--primary); 
-    color: var(--white); /* Sets base color to white */
+    background-color: var(--primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,15 +42,16 @@ header {
     z-index: 1000;
 }
 
-/* Explicitly force logo to white (overrides h1 color) */
-.logo {
+/* FIX 1: Force Logo and Headings to White (Overrides the generic dark blue h1 rule) */
+header h1, header h2, .logo {
     font-family: var(--heading-font);
     color: var(--white) !important; 
     font-weight: 700;
     font-size: 1.5rem;
+    margin: 0; /* Removes default margin that expands the header */
 }
 
-/* Hamburger Button */
+/* FIX 2: Force Hamburger Button to White (Fixes the 1.15:1 contrast error) */
 .menu-btn {
     background: none;
     border: none;
@@ -59,27 +59,28 @@ header {
     display: flex;
     align-items: center;
     padding: 5px;
-    color: var(--white); /* CRITICAL: Forces button text to white */
+    color: var(--white) !important; /* Forces the button text color to white */
 }
 
+/* Use the CSS character icon */
 .menu-btn::before {
     content: "☰";
-    color: var(--white);
     font-size: 2rem;
+    color: var(--white) !important;
 }
 
 .menu-btn img {
-    display: none; 
+    display: none;
 }
 
 /* Mobile Sidebar Menu */
 .nav-bar {
     position: fixed;
     top: 0;
-    right: -100%; 
+    right: -100%;
     width: 250px;
     height: 100vh;
-    background-color: var(--primary);
+    background-color: var(--primary); /* Dark Blue Background */
     transition: 0.4s ease-in-out;
     padding: 2rem;
     display: flex;
@@ -97,12 +98,13 @@ header {
     border: none;
     cursor: pointer;
     margin-bottom: 2rem;
-    color: var(--white); /* CRITICAL: Forces close button to white */
+    color: var(--white) !important; /* Ensure Close X is white */
     font-size: 1.5rem;
 }
 
 #nav-list {
     list-style: none;
+    padding: 0;
 }
 
 #nav-list li {
@@ -110,20 +112,20 @@ header {
 }
 
 #nav-list a {
-    color: var(--white);
+    color: var(--white); /* White text on Dark Blue = PASS (14.5:1) */
     text-decoration: none;
     font-family: var(--body-font);
     font-size: 1.2rem;
+    display: block;
 }
 
 /* Active Page Wayfinding */
 #nav-list a.active {
-    color: var(--secondary); /* Light Blue on Dark Blue = PASS (7.04:1) */
+    color: var(--secondary); /* Cyan text on Dark Blue = PASS (7:1) */
     font-weight: bold;
     border-left: 4px solid var(--secondary);
     padding-left: 10px;
 }
-
 .overlay {
     position: fixed;
     top: 0;
