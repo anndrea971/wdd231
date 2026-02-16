@@ -34,7 +34,7 @@ h1, h2, h3 {
 /* --- Header & Navigation --- */
 header {
     background-color: var(--primary); 
-    color: var(--white); /* CRITICAL: Fixes contrast audit by forcing white text */
+    color: var(--white); /* Sets base color to white */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,9 +43,10 @@ header {
     z-index: 1000;
 }
 
+/* Explicitly force logo to white (overrides h1 color) */
 .logo {
     font-family: var(--heading-font);
-    color: var(--white);
+    color: var(--white) !important; 
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -58,6 +59,7 @@ header {
     display: flex;
     align-items: center;
     padding: 5px;
+    color: var(--white); /* CRITICAL: Forces button text to white */
 }
 
 .menu-btn::before {
@@ -67,7 +69,7 @@ header {
 }
 
 .menu-btn img {
-    display: none; /* Uses CSS character for reliability */
+    display: none; 
 }
 
 /* Mobile Sidebar Menu */
@@ -95,7 +97,7 @@ header {
     border: none;
     cursor: pointer;
     margin-bottom: 2rem;
-    color: var(--white);
+    color: var(--white); /* CRITICAL: Forces close button to white */
     font-size: 1.5rem;
 }
 
@@ -116,7 +118,7 @@ header {
 
 /* Active Page Wayfinding */
 #nav-list a.active {
-    color: var(--secondary);
+    color: var(--secondary); /* Light Blue on Dark Blue = PASS (7.04:1) */
     font-weight: bold;
     border-left: 4px solid var(--secondary);
     padding-left: 10px;
